@@ -1,3 +1,78 @@
-% Title
-% Author
-% August 5th, 2018
+% CSC722 Homework 8
+% Jon Craton
+
+Find the eigenvalues and eigenvectors of the following matrices: (The complete solution is required for 
+all following matrices) 
+
+Matrix A
+========
+
+```python
+A = [
+  [1, 0],
+  [1, 3]
+]
+```
+
+Recall than eigenvalues and eigenvectors make the following expression true:
+
+$Av = λv$
+
+Where:
+
+A (a vector) is the eigenvector and λ (a scalar) is the eigenvalue.
+
+We can use the identity matrix to convert both sides to a cleaner matrix space:
+
+$Av = λIv$
+
+Then we can rewrite as:
+
+$Av - λIv = 0$
+
+$v(A - λI) = 0$
+
+This equation has a non-zero solution iff the determinant of the left hand side is zero. Therefore, the eigenvalues of A also satisify the following somewhat simpler equation that does not require knowing the eigenvector:
+
+$|A - λI| = 0$
+
+Recall that the determinant for a 2x2 matrix is:
+
+$\begin{vmatrix}
+  a & b \\
+  c & d
+\end{vmatrix} = ad - bc$
+
+We can now take the determinant of the above expression to determine the characteristic polynomial. 
+
+$|A - λ| = \begin{vmatrix}
+  1 - λ & 0 \\
+  1 & 3 - λ
+\end{vmatrix} = (1 - λ)(3 - λ) - (0)(1)$
+
+The roots are obviously 1 and 3. These are our eigenvalues.
+
+WIP - https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#Eigenvalues_and_the_characteristic_polynomial
+
+```python
+B = [
+  [7, -4],
+  [5, -2]
+]
+```
+
+```python
+C = [
+  [-3, 1, -3],
+  [20, 3,  10],
+  [2, -2,  4]
+]
+```
+
+```python
+D = [
+  [1, -4, -4],
+  [8,-11, -8],
+  [-8, 8,  5]
+]
+```
