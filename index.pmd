@@ -41,7 +41,7 @@ $v(A - λI) = 0$
 Eigenvalues
 -----------
 
-This equation has a non-zero solution iff the determinant of the left hand side is zero. Therefore, the eigenvalues of A also satisify the following somewhat simpler equation that does not require knowing the eigenvector:
+This equation has a non-zero solution iff the determinant of the left hand side is zero. Therefore, the eigenvalues of A also satisfy the following somewhat simpler equation that does not require knowing the eigenvector:
 
 $|A - λI| = 0$
 
@@ -147,7 +147,7 @@ $c[0,1]$
 Check
 -----
 
-Now let's check our work against the LAPACK implentation used in scipy:
+Now let's check our work against the LAPACK implementation used in scipy:
 
 ```python
 import numpy as np
@@ -158,7 +158,7 @@ linalg.eig(np.array(A))
 
 That looks correct.
 
-Let's also confirm symbolicly using sympy:
+Let's also confirm symbolically using sympy:
 
 ```python,results="tex"
 from sympy import Matrix, latex
@@ -296,7 +296,7 @@ $c[1,1]$
 Check
 -----
 
-Now let's check our work against the LAPACK implentation used in scipy:
+Now let's check our work against the LAPACK implementation used in scipy:
 
 ```python
 import numpy as np
@@ -307,7 +307,7 @@ linalg.eig(np.array(B))
 
 That looks correct.
 
-Let's also confirm symbolicly using sympy:
+Let's also confirm symbolically using sympy:
 
 ```python,results="tex"
 print("$%s$" % latex(Matrix(B).eigenvects()))
@@ -338,7 +338,7 @@ $\begin{vmatrix}
   c & d
 \end{vmatrix} = ad - bc$
 
-And for a 3x3 matrix the detminant is:
+And for a 3x3 matrix the determinant is:
 
 $|A| = \begin{vmatrix} a & b & c\\d & e & f\\g & h & i \end{vmatrix} = 
 a\,\begin{vmatrix} \Box & \Box & \Box \\ \Box & e & f \\ \Box & h & i \end{vmatrix} - 
@@ -480,7 +480,7 @@ Now let's check our work against [WolframAlpha](https://www.wolframalpha.com/inp
 
 ![](wa_c.png)
 
-Let's also confirm symbolicly using sympy:
+Let's also confirm symbolically using sympy:
 
 ```python,results="tex"
 print("$%s$" % latex(Matrix(B).eigenvects()))
@@ -511,7 +511,7 @@ $\begin{vmatrix}
   c & d
 \end{vmatrix} = ad - bc$
 
-And for a 3x3 matrix the detminant is:
+And for a 3x3 matrix the determinant is:
 
 $|A| = \begin{vmatrix} a & b & c\\d & e & f\\g & h & i \end{vmatrix} = 
 a\,\begin{vmatrix} \Box & \Box & \Box \\ \Box & e & f \\ \Box & h & i \end{vmatrix} - 
