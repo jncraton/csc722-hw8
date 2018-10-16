@@ -58,8 +58,8 @@ $|A - λ| = \begin{vmatrix}
 
 The roots are obviously 1 and 3. These are our eigenvalues.
 
-Eigenvalues
------------
+Eigenvectors
+------------
 
 Now we need to solve our previous equation for v:
 
