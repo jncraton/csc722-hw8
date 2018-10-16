@@ -661,7 +661,5 @@ Now let's check our work against [WolframAlpha](https://www.wolframalpha.com/inp
 And sympy:
 
 ```python,results="tex"
-from sympy import Matrix, latex
-
 print("$%s$" % latex(Matrix(D).eigenvects()))
 ```
