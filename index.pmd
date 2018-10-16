@@ -141,6 +141,9 @@ $c[2,-1]$
 
 $c[0,1]$
 
+Check
+-----
+
 Now let's check our work against the LAPACK implentation used in scipy:
 
 ```python
@@ -151,6 +154,14 @@ linalg.eig(np.array(A))
 ```
 
 That looks correct.
+
+Let's also confirm symbolicly using sympy:
+
+```python,results="tex"
+from sympy import Matrix, latex
+
+print("$%s$" % latex(Matrix(A).eigenvects()))
+```
 
 Matrix B
 ========
@@ -289,6 +300,12 @@ linalg.eig(np.array(B))
 ```
 
 That looks correct.
+
+Let's also confirm symbolicly using sympy:
+
+```python,results="tex"
+print("$%s$" % latex(Matrix(B).eigenvects()))
+```
 
 Matrix C
 ========
@@ -456,6 +473,12 @@ Check
 Now let's check our work against [WolframAlpha](https://www.wolframalpha.com/input/?i=%5B%5B-3,+1,+-3%5D,%5B20,+3,+10%5D,%5B2,+-2,+4%5D%5D):
 
 ![](wa_c.png)
+
+Let's also confirm symbolicly using sympy:
+
+```python,results="tex"
+print("$%s$" % latex(Matrix(B).eigenvects()))
+```
 
 Matrix D
 ========
