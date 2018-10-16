@@ -301,6 +301,143 @@ C = [
 ]
 ```
 
+Eigenvalues
+-----------
+
+We need to again solve the following:
+
+$|C - λI| = 0$
+
+Recall that the determinant for a 2x2 matrix is:
+
+$\begin{vmatrix}
+  a & b \\
+  c & d
+\end{vmatrix} = ad - bc$
+
+And for a 3x3 matrix the detminant is:
+
+$\begin{align}|A| = \begin{vmatrix} a & b & c\\d & e & f\\g & h & i \end{vmatrix} = 
+a\,\begin{vmatrix} \Box & \Box & \Box \\ \Box & e & f \\ \Box & h & i \end{vmatrix} - 
+b\,\begin{vmatrix} \Box & \Box & \Box \\ d & \Box & f \\ g & \Box & i \end{vmatrix} + 
+c\,\begin{vmatrix} \Box & \Box & \Box \\ d & e & \Box \\ g & h & \Box \end{vmatrix}
+&= a\,\begin{vmatrix} e & f \\ h & i \end{vmatrix} - 
+b\,\begin{vmatrix} d & f \\ g & i \end{vmatrix} + 
+c\,\begin{vmatrix} d & e \\ g & h \end{vmatrix}\\ &= aei+bfg+cdh-ceg-bdi-afh.\end{align}$
+
+We can now take the determinant of the above expression to determine the characteristic polynomial. 
+
+$|B - λI| = \begin{vmatrix}
+  -3 - λ & 1     & -3    \\
+  20     & 3 - λ & 10    \\
+  2      & -2    & 4 - λ
+\end{vmatrix} =$
+
+$(-3-λ)(3-λ)(4-λ) + (1)(10)(2) + (-3)(20)(-2) - (-3)(3-λ)(2) - (1)(20)(4-λ) - (-3-λ)(10)(-2)$
+
+Let's expand:
+
+$-λ^3 + 4 λ^2 + 3 λ - 18$
+
+And factor:
+
+$-(λ - 3)^2 (λ + 2)$
+
+Our roots and eigenvalues are:
+
+$λ = -2, λ = 3
+
+Eigenvectors
+-----------
+
+Now we need to solve our previous equation for v:
+
+$v(B - λI) = 0$
+
+Where λ = 2:
+
+$v(B - λI) = 0$
+
+$v (\begin{vmatrix}
+  7 & -4 \\
+  5 & -2
+\end{vmatrix} - \begin{vmatrix}
+  2 & 0 \\
+  0 & 2
+\end{vmatrix}) = 0$
+
+$v \begin{vmatrix}
+  5 & -4 \\
+  5 & -4
+\end{vmatrix} = 0$
+
+$\begin{vmatrix}
+  x \\
+  y
+\end{vmatrix} \begin{vmatrix}
+  5 & -4 \\
+  5 & -4
+\end{vmatrix} = 0$
+
+$5x - 4y = 0$
+
+$5x - 4y = 0$
+
+$5x = 4y$
+$1.25x = y$
+
+$c[1, 1.25]$
+
+Where λ = 3:
+
+$v(B - λI) = 0$
+
+$v (\begin{vmatrix}
+  7 & -4 \\
+  5 & -2
+\end{vmatrix} - \begin{vmatrix}
+  3 & 0 \\
+  0 & 3
+\end{vmatrix}) = 0$
+
+$v \begin{vmatrix}
+  4 & -4 \\
+  5 & -5
+\end{vmatrix} = 0$
+
+$\begin{vmatrix}
+  x \\
+  y
+\end{vmatrix} \begin{vmatrix}
+  4 & -4 \\
+  5 & -5
+\end{vmatrix} = 0$
+
+$4x - 4y = 0$
+
+$5x - 5y = 0$
+
+$x = y$
+
+$c[1,1]$
+
+Our eigenvectors are:
+
+$c[1,1.25]$
+
+$c[1,1]$
+
+Now let's check our work against the LAPACK implentation used in scipy:
+
+```python
+import numpy as np
+from scipy import linalg
+
+linalg.eig(np.array(B))
+```
+
+That looks correct.
+
 Matrix D
 ========
 
