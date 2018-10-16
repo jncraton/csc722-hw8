@@ -617,7 +617,7 @@ $-x + y + z = 0$
 
 It's solution is:
 
-$z = x - y$
+$x = y + z$
 
 This results in two families of vectors:
 
