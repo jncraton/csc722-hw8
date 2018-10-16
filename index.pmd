@@ -60,6 +60,8 @@ Where λ = 1:
 
 $v(A - λI) = 0$
 
+$v(A - I) = 0$
+
 $v (\begin{vmatrix}
   1 & 0 \\
   1 & 3
@@ -68,32 +70,67 @@ $v (\begin{vmatrix}
   0 & 1
 \end{vmatrix}) = 0$
 
-$v(\begin{vmatrix}
+$v \begin{vmatrix}
   0 & 0 \\
   1 & 2
-\end{vmatrix}) = 0$
+\end{vmatrix} = 0$
 
 $\begin{vmatrix}
   x \\
   y
-\end{vmatrix} · \begin{vmatrix}
-  0 & 0 \\
-  1 & 2
+\end{vmatrix} \begin{vmatrix}
+   0 & 0 \\
+   1 & 2
+\end{vmatrix} = 0$
+
+$0x + 0y = 0$
+
+$x + 2y = 0$
+
+$x = -2y$
+
+$c[2,-1]$
+
+Where λ = 3:
+
+$v(A - λI) = 0$
+
+$v(A - 3I) = 0$
+
+$v (\begin{vmatrix}
+  1 & 0 \\
+  1 & 3
+\end{vmatrix} - \begin{vmatrix}
+  3 & 0 \\
+  0 & 3
+\end{vmatrix}) = 0$
+
+$v \begin{vmatrix}
+  -2 & 0 \\
+   1 & 0
 \end{vmatrix} = 0$
 
 $\begin{vmatrix}
   x \\
-  2y
+  y
+\end{vmatrix} \begin{vmatrix}
+  -2 & 0 \\
+   1 & 0
 \end{vmatrix} = 0$
 
-$\begin{vmatrix}
-  x \\
-  2y
-\end{vmatrix} = 0$
+$-2x = 0$
 
-$\sqrt{x^2 + 4y^2} = 0$
+$x = 0$
 
-WIP - https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#Eigenvalues_and_the_characteristic_polynomial
+So, y can be anything as long as x is zero:
+
+$c[0,1]$
+
+So, our eigenvectors are:
+
+$c[2,-1]$
+
+$c[0,1]$
 
 Now let's check our work against the LAPACK implentation used in scipy:
 
@@ -101,8 +138,13 @@ Now let's check our work against the LAPACK implentation used in scipy:
 import numpy as np
 from scipy import linalg
 
-linalg.eig(np.array(A),left=True)
+linalg.eig(np.array(A))
 ```
+
+That looks correct.
+
+Matrix B
+========
 
 ```python
 B = [
