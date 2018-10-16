@@ -345,98 +345,117 @@ $-(λ - 3)^2 (λ + 2)$
 
 Our roots and eigenvalues are:
 
-$λ = -2, λ = 3
+$λ = -2, λ = 3$
 
 Eigenvectors
 -----------
 
 Now we need to solve our previous equation for v:
 
-$v(B - λI) = 0$
+$v(C - λI) = 0$
 
-Where λ = 2:
+Where λ = -2:
 
-$v(B - λI) = 0$
+$v(C - λI) = 0$
 
 $v (\begin{vmatrix}
-  7 & -4 \\
-  5 & -2
+  -3  & 1  & -3 \\
+  20  & 3  & 10 \\
+  2   & -2 & 4 
 \end{vmatrix} - \begin{vmatrix}
-  2 & 0 \\
-  0 & 2
+  -2 & 0 & 0  \\
+  0 & -2 & 0  \\
+  0 &  0 & -2 
 \end{vmatrix}) = 0$
 
 $v \begin{vmatrix}
-  5 & -4 \\
-  5 & -4
+  -1  & 1  & -3 \\
+  20  & 5  & 10 \\
+  2   & -2 & 6 
 \end{vmatrix} = 0$
 
 $\begin{vmatrix}
   x \\
-  y
+  y \\
+  z
 \end{vmatrix} \begin{vmatrix}
-  5 & -4 \\
-  5 & -4
+  -1  & 1  & -3 \\
+  20  & 5  & 10 \\
+  2   & -2 & 6 
 \end{vmatrix} = 0$
 
-$5x - 4y = 0$
+Now we have the system:
 
-$5x - 4y = 0$
+$-x + y - 3z = 0$
 
-$5x = 4y$
-$1.25x = y$
+$20x + 5y + 10z = 0$
 
-$c[1, 1.25]$
+$2x - 2y + 6z = 0$
+
+It's solutions are:
+
+$y = -2x$
+
+$z = -x$
+
+Or as a vector:
+
+$c[1,-2,-1]$
 
 Where λ = 3:
 
-$v(B - λI) = 0$
+$v(C- λI) = 0$
 
 $v (\begin{vmatrix}
-  7 & -4 \\
-  5 & -2
+  -3  & 1  & -3 \\
+  20  & 3  & 10 \\
+  2   & -2 & 4 
 \end{vmatrix} - \begin{vmatrix}
-  3 & 0 \\
-  0 & 3
+  3 & 0 & 0  \\
+  0 & 3 & 0  \\
+  0 & 0 & 3 
 \end{vmatrix}) = 0$
 
 $v \begin{vmatrix}
-  4 & -4 \\
-  5 & -5
+  -6  & 1  & -3 \\
+  20  & 0  & 10 \\
+  2   & -2 & 1 
 \end{vmatrix} = 0$
 
 $\begin{vmatrix}
   x \\
-  y
+  y \\
+  z
 \end{vmatrix} \begin{vmatrix}
-  4 & -4 \\
-  5 & -5
+  -6  & 1  & -3 \\
+  20  & 0  & 10 \\
+  2   & -2 & 1 
 \end{vmatrix} = 0$
 
-$4x - 4y = 0$
+Now we have the system:
 
-$5x - 5y = 0$
+$-6x + y - 3z = 0$
 
-$x = y$
+$20x + 0y + 10z = 0$
 
-$c[1,1]$
+$2x - 2y + z = 0$
 
-Our eigenvectors are:
+It's solutions are:
 
-$c[1,1.25]$
+$y = 0$
 
-$c[1,1]$
+$z = 2x$
 
-Now let's check our work against the LAPACK implentation used in scipy:
+Or as a vector:
 
-```python
-import numpy as np
-from scipy import linalg
+$c[1,0,-2]$
 
-linalg.eig(np.array(B))
-```
+Check
+=====
 
-That looks correct.
+Now let's check our work against [WolframAlpha](https://www.wolframalpha.com/input/?i=%5B%5B-3,+1,+-3%5D,%5B20,+3,+10%5D,%5B2,+-2,+4%5D%5D):
+
+![](wa_c.png)
 
 Matrix D
 ========
