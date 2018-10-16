@@ -290,6 +290,9 @@ $c[1,1.25]$
 
 $c[1,1]$
 
+Check
+-----
+
 Now let's check our work against the LAPACK implentation used in scipy:
 
 ```python
