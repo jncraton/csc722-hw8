@@ -103,6 +103,8 @@ $x = -2y$
 
 $c[2,-1]$
 
+$v_1 = [2,-1]$
+
 Where λ = 3:
 
 $v(A - λI) = 0$
@@ -140,9 +142,9 @@ $c[0,1]$
 
 So, our eigenvectors are:
 
-$c[2,-1]$
+$v_1 = [2,-1]$
 
-$c[0,1]$
+$v_1 = [0,1]$
 
 Check
 -----
@@ -254,6 +256,8 @@ $1.25x = y$
 
 $c[1, 1.25]$
 
+$v_1 = [1, 1.25]$
+
 Where λ = 3:
 
 $v(B - λI) = 0$
@@ -289,9 +293,9 @@ $c[1,1]$
 
 Our eigenvectors are:
 
-$c[1,1.25]$
+$v_1 = [1,1.25]$
 
-$c[1,1]$
+$v_2 = [1,1]$
 
 Check
 -----
@@ -423,7 +427,7 @@ $z = -x$
 
 Or as a vector:
 
-$c[1,-2,-1]$
+$v_1 = [1,-2,-1]$
 
 Where λ = 3:
 
@@ -471,7 +475,7 @@ $z = 2x$
 
 Or as a vector:
 
-$c[1,0,-2]$
+$v_2 = [1,0,-2]$
 
 Check
 -----
@@ -596,7 +600,7 @@ $z = -2x$
 
 Or as a vector:
 
-$c[1,2,-2]$
+$v_1 = [1,2,-2]$
 
 Where λ = -3:
 
@@ -648,11 +652,11 @@ It's solution is:
 
 $x = y + z$
 
-This results in two families of vectors:
+This results in two linearly independent eigenvectors:
 
-$c[1,0,1]$
+$v_2 = [1,0,1]$
 
-$c[1,1,0]$
+$v_3 = [1,1,0]$
 
 Check
 -----
