@@ -61,6 +61,8 @@ $|A - λ| = \begin{vmatrix}
 
 The roots are obviously 1 and 3. These are our eigenvalues.
 
+$λ = 1, λ = 3$
+
 Eigenvectors
 ------------
 
@@ -144,7 +146,7 @@ So, our eigenvectors are:
 
 $v_1 = [2,-1]$
 
-$v_1 = [0,1]$
+$v_2 = [0,1]$
 
 Check
 -----
@@ -477,6 +479,12 @@ Or as a vector:
 
 $v_2 = [1,0,-2]$
 
+So, our eigenvectors are:
+
+$v_1 = [1,-2,-1]$
+
+$v_2 = [1,0,-2]$
+
 Check
 -----
 
@@ -653,6 +661,14 @@ It's solution is:
 $x = y + z$
 
 This results in two linearly independent eigenvectors:
+
+$v_2 = [1,0,1]$
+
+$v_3 = [1,1,0]$
+
+Our complete set of eigenvectors is:
+
+$v_1 = [1,2,-2]$
 
 $v_2 = [1,0,1]$
 
