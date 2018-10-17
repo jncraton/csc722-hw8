@@ -26,7 +26,7 @@ $Av = λv$
 
 Where:
 
-A (a vector) is the eigenvector and λ (a scalar) is the eigenvalue.
+A is our matrix, v (a vector) is the eigenvector, and λ (a scalar) is the eigenvalue.
 
 We can use the identity matrix to convert both sides to a cleaner matrix space:
 
